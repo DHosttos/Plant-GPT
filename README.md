@@ -24,7 +24,7 @@ El proyecto se alinea con los objetivos 11 y 15 de los Objetivos de Desarrollo S
 
 + Batería autónoma, recargable mediante puerto tipo C.
 
-+ Lectura de (al menos) las siguientes variables: 
++ Lectura de las siguientes variables: 
 
     + Temperatura ambiente
     + Temperatura del suelo
@@ -34,8 +34,8 @@ El proyecto se alinea con los objetivos 11 y 15 de los Objetivos de Desarrollo S
     + Intensidad lumínica
 + Pantalla monocromática de bajo consumo
 + Botón de lectura de datos o "Hold"
-+ Conexión con una aplicación externa para el guardado de registros de lecturas previas
-+ Organización de lectura organizada de diferentes plantas
++ Conexión con una aplicación externa, via Bluetooth o Wi-fi, para el guardado de registros de lecturas previas
++ Acceso a historial de datos para diferentes plantas
 
 ## Sensores
 ### Temperatura, Presión y Humedad
@@ -52,7 +52,28 @@ Es preferible escoger un sensor de humedad en suelo de tipo capacitivo y no resi
 
 Este sensor, al igual que el de acidez, debe ser enterrado en el suelo de la planta para la lectura, y por ello es conveniente que estos estén conectados al resto del dispositivo mediante un cable.
 
-## Procesamiento
+La salida de este es de tipo analógica, capaz de operar a 3.3V y a 5V.
 
-El procesamiento será realizado por una tarjeta de desarrollo ESP32, programada mediante la IDE de Arduino. Se escogió esta tarjeta por su facilidad de incorporación de capacidades Bluetooth o WiFi para la organización de datos en una aplicación externa.
+## Pantalla
+
+La visualización de datos se hará por medio de la pantalla LCD monocromática Nokia 5110, este a su vez es operado mediante el controlador PCD8544, el cual opera mediante comunicación SPI.
+
+![alt text](image-5.png)
+
+Cuenta con una pantalla 48x84 con posibilidad de retroiluminación graduable, al tratarse de una pantalla LCD, no requiere ser iluminada cuando ay luz externa, de esta manera se puede realizar la lectura de información fácilmente si se está expuesto al sol con un mínimo consumo de energía.
+
+## Procesamiento
+El procesamiento será llevado a cabo por el microcontrolador ATMEGA328P-PU, conocido por su simplicidad y versatilidad. El proyecto no requiere un procesamiento severo, por lo cual se considera suficiente ofreciendo aún un ahorro de espacio considerable en comparación al uso de un Arduino UNO o ESP32 completos.
+
+![alt text](image-4.png)
+
+## Alimentación
+
+Para la alimentación se usará una batería de ion de Litio de 3.7V junto a un módulo de carga TP4056, que permite conexión tipo USB-C.
+
+Para estabilizar la tensión se requiere un módulo elevador de tensión a 5V estabes, pues la batería varía su tensión de 4.2V cuando está cargada a 3.4V cuando está cerca de descargarse en su totalidad.
+
+![alt text](image-6.png)
+
+
 
