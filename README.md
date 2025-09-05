@@ -67,6 +67,7 @@ El procesamiento será llevado a cabo por el microcontrolador ATMEGA328P-PU, con
 
 ![alt text](image-4.png)
 
+
 ## Alimentación
 
 Para la alimentación se usará una batería de ion de Litio de 3.7V junto a un módulo de carga TP4056, que permite conexión tipo USB-C.
