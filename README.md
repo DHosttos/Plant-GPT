@@ -91,6 +91,21 @@ El módulo cuenta con la siguiente nomenclatura de pines
  
 ![alt text](image-8.png)
 
+## Conexión Bluetooth
+
+El módulo HC-05 está diseñado para conexión serial, por lo cual es ideal para uso con Arduino.
+
+![alt text](image-11.png)
+
+Por medio de una adaptador TTL es posible hace la configuración de comandos AT, la cual es necesaria para cambiar el nombre del dispositivo y configurarlo como SLAVE permanentemente
+
+![alt text](image-12.png)
+
+Esto se hace a través del software Tera Term, una vez realizada la configuración esta se puede visualizar mediante cualquier MASTER, como un celular o PC.
+
+![alt text](image-13.png)
+
+
 ## Alimentación
 
 Para la alimentación se usará una batería de ion de Litio de 3.7V junto a un módulo de carga TP4056, que permite conexión tipo USB-C.
