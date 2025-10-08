@@ -115,4 +115,17 @@ Para estabilizar la tensión se requiere un módulo elevador de tensión a 5V es
 ![alt text](image-6.png)
 
 
+## Tratamiento de Señal
+
+Una vez montado en protoboard, sin ningún filtrado, las señales son fuertemente erráticas, en especial el sensor de humedad de suelo y el de intensidad lumínica, de entrada análoga, para su tratamiento se decide tanto alternativas digitales como análogicas, promediado en el tiempo y con condensadores, respectivamente.
+
+Teniendo en cuenta que además los condensadores no gastan espacio ni costo excesivo, y pueden suponer una mejora sustancial, más teniendo en cuenta el positble ruido y armónicos generados por el Step-up.
+
+## ACTUALIZACIÓN
+
+En segunda inspección, el sensor de CO2 requiere funcionamiento constante, la calibración, por ejemplo, dura 24 horas y requiere control del entorno.
+
+Una vez calibrado aún tarda un tiempo considerable en dar lecturas corrects (10-30 minutos), consideramos que esto no es una característica compatible con la idea del producto (plug and play), y será descartado, se considerará como un gadget adicional, en caso tal.
+
+
 
