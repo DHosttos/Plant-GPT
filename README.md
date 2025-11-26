@@ -131,4 +131,49 @@ Una vez calibrado aún tarda un tiempo considerable en dar lecturas corrects (10
 INTENTO UNO
 <img width="2559" height="1506" alt="image" src="https://github.com/user-attachments/assets/6393fe82-554f-4dea-a905-efbc82ba0e1b" />
 
+🧠 Módulo Plant-GPT (IA en Python + Servidor FastAPI)
+
+El proyecto incluye un módulo de inteligencia artificial implementado en Python, encargado de analizar las variables medidas por el dispositivo y generar un diagnóstico adaptado a cada tipo de planta.
+
+Este módulo corre como un servidor web (API) gracias a FastAPI, permitiendo que la aplicación móvil (Flutter) o cualquier cliente envíe datos y reciba un diagnóstico inteligente en tiempo real.
+
+✔️ Estado actual
+
+Servidor FastAPI funcionando correctamente en http://127.0.0.1:8000
+
+Endpoint activo: POST /plant
+
+Procesamiento de:
+
+Temperatura ambiente (temp)
+
+Humedad del aire (hum)
+
+Humedad del suelo (soil)
+
+Tipo de planta (plant)
+
+Respuestas generadas automáticamente según reglas avanzadas y textos dinámicos.
+
+✔️ Ejemplo real (como en Swagger)
+
+Request
+
+{
+  "temp": 25,
+  "hum": 70,
+  "soil": 70,
+  "plant": "CACTUS"
+}
+
+
+Response
+
+{
+  "respuesta": "1. **Estado de la planta:** Crítico\n2. **Explicación breve:** Los cactus son plantas que requieren un ambiente seco y una baja humedad, tanto en el aire como en el suelo. La humedad ambiental del 70% y la humedad del suelo del 70% son condiciones excesivas para un cactus, lo que puede conducir a la pudrición de las raíces y otros problemas relacionados con el exceso de agua.\n3. **Recomendación práctica:** Reduzca la humedad del suelo permitiendo que se seque completamente antes de volver a regar. Asegúrese de que la maceta tenga un buen drenaje y considere mover el cactus a un entorno con menor humedad. También revise las condiciones ambientales y ajuste la ventilación para reducir la humedad del aire."
+}
+
+
+<img width="2550" height="1338" alt="image" src="https://github.com/user-attachments/assets/1cfc73bb-e9a0-4718-9a9f-ecd816571fea" />
+
 
