@@ -128,4 +128,7 @@ En segunda inspección, el sensor de CO2 requiere funcionamiento constante, la c
 Una vez calibrado aún tarda un tiempo considerable en dar lecturas corrects (10-30 minutos), consideramos que esto no es una característica compatible con la idea del producto (plug and play), y será descartado, se considerará como un gadget adicional, en caso tal.
 
 
+INTENTO UNO
+<img width="2559" height="1506" alt="image" src="https://github.com/user-attachments/assets/6393fe82-554f-4dea-a905-efbc82ba0e1b" />
+
 
